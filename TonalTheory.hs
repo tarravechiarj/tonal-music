@@ -1,5 +1,20 @@
 
-module TonalTheory where
+module TonalTheory 
+    (
+      Key, Direction
+    , pcEq, pitchEq, transPC, notePitch
+    , modeIntervals, scaleDegree
+    , offsetScale, transDiatonic
+    , stepMotion, stepMotiond
+    , triadPitches, scaleTriad
+    , chordToList, chordToList1, lineToList1
+    , brokenChord
+    , changeDur
+    , sortNotes
+    , arpeggiate, arpeggiato
+    , mordent, mordentd
+    , mMap1, pMap1, mMap2
+    ) where
 
 import Euterpea
 import Data.List hiding (transpose)
