@@ -68,7 +68,7 @@ stepMotion d n1@(Prim (Note _ p1)) n2@(Prim (Note _ p2)) =
                 else [ap1-1, ap1-2 .. ap2+1]
         steps = line $ map (note d . pitch) ints
     in n1 :+: steps :+: n2
-stepMotion _ _ _ = error "stepMotion: non-note arguemnt"
+stepMotion _ _ _ = error "stepMotion: non-note argument"
 
 -- Diatonic version
 stepMotiond :: Key -> Dur -> Music Pitch -> Music Pitch -> Music Pitch
@@ -81,7 +81,7 @@ stepMotiond k d n1@(Prim (Note _ p1)) n2@(Prim (Note _ p2)) =
                 else takeWhile ((> ap2) . absPitch) $ map td [-1,-2..]
         steps = line $ map (note d) ps
     in n1 :+: steps :+: n2
-stepMotiond _ _ _ _ = error "stepMotiond: non-note arguemnt"
+stepMotiond _ _ _ _ = error "stepMotiond: non-note argument"
 
 triadPitches :: Key -> Int -> Octave -> [Pitch]
 triadPitches key degree o =
